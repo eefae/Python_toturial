@@ -7,7 +7,7 @@
 
 # Environment(Aanconda)
 
-Anconda就像是 Python的懶人包，它內建了許多 Python的熱門套件，如此一來使用者就不用在安裝套件時面鄰種種錯誤訊息與漫長的 debug過程 (尤其是在 windows作業系統下)。換句話說，能讓 coder不用花費心力在處理系統環境端的問題，而是能直接捲起袖子開始寫程式，進行現實問題的分析。不僅如此，他還有內建 Spyder IDE與 Jupyter Notebook，這兩個編譯器對於新手而言相對友善。
+Anconda就像是 Python的懶人包，它內建了許多 Python的熱門套件，如此一來使用者就不用在安裝套件時面臨種種錯誤訊息與漫長的 debug過程 (尤其是在 windows作業系統下)。換句話說，能讓 coder不用花費心力在處理系統環境端的問題，而是能直接捲起袖子開始寫程式，進行現實問題的分析。不僅如此，他還有內建 Spyder IDE與 Jupyter Notebook，這兩個編譯器對於新手而言相對友善。
 
 ## 1. 安裝環節
 
@@ -108,8 +108,55 @@ print(demo)
   - 或(or, |)
   - 非(not)
   - 包含(in )
-  - 判斷是否為同一物件(is )
+  - 判斷是否為同一物件(is)
+- <span style="color:red">數組儲存</span>
+  - 陣列(List)
+    - 將一連串的元素放在一個序列中，使其都有各自的編號，放入的元素可以是字串、數字、布林、串列、字典...等基本元素
+  - 字典(Dict)
+    - 建立字典有兩種方法，建立時必須要包含「鍵 key」和「值 value」兩個項目，鍵在左側，值在右側。
+  - 元組(Tuple)
+    - 和List非常類似
+    - tuple「只要建立了，就不能修改內容」
+    - tuple 使用「小括號」，串列 list 使用「方括號」
+    - 如果 tuple 裡只有一個元素，後方必須加上「逗號」
+    - 讀取速度比List還要快
+  - 集合(Set)
+    - 集合由「數字、字串或布林」所組成，同一個集合裡的項目，可以是不同的型別
+    - 如果建立時出現重複的項目，只會保留一個，如果是字典，只會保留鍵
 
-```
-x = 100
-```
+# Lesson 2 條件判斷及重複迴圈
+- 條件判斷
+  - if,elif,else
+- 重複迴圈
+  - for,while
+
+# Lesson 3 函數定義
+- definition
+  - 在 Python 裡，使用「def」定義一個函式，函式的命名規則和變數相同
+  - 可以回傳多個值，或執行相關動作
+- module
+  - import 陳述式最簡單的用法就是「import 模組名稱」，模組名稱是不包含 .py 的名稱
+  - 可以調用裡面的屬性和方法
+  
+# Lesson 4 Linebot機器人
+**架構圖如下**
+![image](./image/linebot_arch.png)
+
+1. 首先下載ngrok(架構途中的webhook)
+  - 用於將本地伺服器位址轉發至網際網路
+  - 申請Authtoken
+  - [下載](https://dashboard.ngrok.com/get-started/setup/windows)
+  - 解壓縮並打開ngrok.exe
+  - 輸入```ngrok config add-authtoken $YOUR_AUTHTOKEN```
+
+2. 打開LINE Developers
+  - [網址](https://developers.line.biz/en/)
+  - 利用個人帳號註冊(註冊免費)
+  - 在Console home新增一個provider
+  - 在provider新增一個channel(類別為MessageAPI)
+  - 將CHANNEL_SECRET & CHANNEL_ACCESS_TOKEN 複製
+
+3. 撰寫server.ipynb
+  - 首先進入虛擬環境
+  - 在terminal上輸入```pip install flask line-bot-sdk```
+  - 
