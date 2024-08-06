@@ -206,13 +206,13 @@ if __name__ == "__main__":
    * 讀取文本
    * 解析文本
    * 產生對話
-2. 撰寫用於建構心靈雞湯這個類別的程式(main.py)
+2. 撰寫用於建構及執行心靈雞湯這個類別的程式(main.py)
 
 ![image](./image/bullshit.png)
 
 
 ### 參考來源
-[https://docs.python.org/3/tutorial/index.html][https://docs.python.org/3/tutorial/index.html]
+[https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
 
 [https://steam.oxxostudio.tw/category/python/index.html](https://steam.oxxostudio.tw/category/python/index.html)
 
