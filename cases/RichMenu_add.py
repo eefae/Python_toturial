@@ -97,13 +97,11 @@ str_raw = '''
 
 str_raw = str_raw.encode('utf-8')
 
-# 請求標頭
 my_headers = {
     'Authorization': f'Bearer {CHANNEL_ACCESS_TOKEN}',
     'Content-Type': 'application/json'
 }
 
-# 執行請求
 response = requests.post(url_add_rich_menu, headers=my_headers, data=str_raw)
 
 pprint(response.text)

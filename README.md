@@ -193,9 +193,27 @@ if __name__ == "__main__":
   - 網址貼在LineDevelopers那個CHANNEL裡面，並在後面加上"/callback"
   ![image](./image/linebot_webhook_url.png)
 
-**可以掃描QRcode去跟機器人聊天**
+**可以掃描QRcode去跟機器人聊天及上傳圖片**
 
-![image](./image/chatbot_final.png)
+![image](./image/linebot_final.jpg)
+
+# Case 2 心靈雞湯產生器
+
+首先請download文本集至專案目錄
+> [data.json](https://raw.githubusercontent.com/StillFantastic/bullshit/master/generator/data.json)
+
+1. 優先撰寫心靈雞湯的類別
+   * 讀取文本
+   * 解析文本
+   * 產生對話
+2. 撰寫用於建構心靈雞湯這個類別的程式(main.py)
+
+![image](./image/bullshit.png)
+
 
 ### 參考來源
+[https://docs.python.org/3/tutorial/index.html][https://docs.python.org/3/tutorial/index.html]
+
 [https://steam.oxxostudio.tw/category/python/index.html](https://steam.oxxostudio.tw/category/python/index.html)
+
+[https://github.com/telunyang](https://github.com/telunyang)
