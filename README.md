@@ -137,8 +137,28 @@ print(demo)
 - module
   - import 陳述式最簡單的用法就是「import 模組名稱」，模組名稱是不包含 .py 的名稱
   - 可以調用裡面的屬性和方法
+
+# Lesson 4 物件導向(Object-Oriented Programming)
+Python設計的方式就是將所有東西都當成一個物件 \
+每個物件都有自己的屬性(propertites)和方法(methods) \
+舉例來說 \
+車子有自己的烤漆顏色、4 門或 5 門、車身的寬高、安全氣囊數量等等，這些是屬性；車子可以按下喇叭、煞車、轉彎、加速等，都是它的方法。
+```python 
+class Parent(): # 類別的命名都是駝峰命名法
+  def __init__(self,name: str):
+    self.name = name # 屬性
+  def post(self): # 方法
+    return f"我是{self.name}"
+
+if __name__ == "__main__":
+  obj = Parent("父親")
+  print(obj.post())
+```
+## 繼承
+物件導向的重要特性 \
+子類別可以繼承父類別的屬性和方法 
   
-# Lesson 4 Linebot機器人
+# Case 1 Linebot機器人
 **架構圖如下**
 ![image](./image/linebot_arch.png)
 
@@ -158,5 +178,24 @@ print(demo)
 
 3. 撰寫server.ipynb
   - 首先進入虛擬環境
-  - 在terminal上輸入```pip install flask line-bot-sdk```
-  - 
+  - 在terminal上輸入```pip install flask line-bot-sdk```安裝我們需要的套件
+  - 創建lineBot.ipynb和linebot_token.py
+  - 程式撰寫
+
+4. 將本地位址轉發到網際網路
+  - 開啟linebot.ipynb的Flask app
+  - 進入到ngrok解壓縮後的目錄下開啟terminal
+  ```powershell
+  .\ngrok.exe http "Flask轉發本地位址"
+  # 會出現轉換到網際網路的位址，請複製他
+  ```
+  ![image](./image/ngrok_localhost.png)
+  - 網址貼在LineDevelopers那個CHANNEL裡面，並在後面加上"/callback"
+  ![image](./image/linebot_webhook_url.png)
+
+**可以掃描QRcode去跟機器人聊天**
+
+![image](./image/chatbot_final.png)
+
+### 參考來源
+[https://steam.oxxostudio.tw/category/python/index.html](https://steam.oxxostudio.tw/category/python/index.html)
