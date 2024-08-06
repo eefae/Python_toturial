@@ -2,10 +2,6 @@
 唬爛產生器原始作者
 Bill Hsu (徐子修)
 https://github.com/StillFantastic/bullshit
-
-Python 版本作者
-Darren Yang (楊德倫)
-https://github.com/telunyang/python_bullshit_generator
 '''
 
 import json
@@ -25,6 +21,7 @@ class Bullshit:
         min_length = 0
         param_min_length = int(param_min_length)
 
+        # shuffle是指將陣列所有元素隨機排列
         list_famous = self.dict_data['famous']
         random.shuffle(list_famous)
 
@@ -36,7 +33,7 @@ class Bullshit:
         while min_length < param_min_length:
 
             int_rand = random.randint(0,99)
-            # int_rand 範圍:
+            # int_rand 隨機產生 0 ~ 99的整數:
             # 0 - 5 且 文字資料是句號、問號等作為結尾: 建立新段落
             # 0 - 27: 使用名人語錄
             # 28 - 99: 使用唬爛語錄
@@ -47,7 +44,8 @@ class Bullshit:
             elif int_rand < 27:
                 if len(list_famous) == 0:
                     break
-
+                
+                # pop為移除指定索引的元素，為了解析文本
                 sentence_famous = list_famous.pop(0)
 
                 # 用曾說過，曾講過來取代data.json中的a
@@ -66,6 +64,8 @@ class Bullshit:
                     break
 
                 sentence_bullshit = list_bullshit.pop(0)
+
+                # 將x取代成主題
                 sentence_bullshit = sentence_bullshit.replace("x", param_topic)
 
                 str_gen += sentence_bullshit
