@@ -212,8 +212,13 @@ if __name__ == "__main__":
 
 
 ### 參考來源
+
+[Anaconda](https://www.anaconda.com)
+
 [https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
 
 [https://steam.oxxostudio.tw/category/python/index.html](https://steam.oxxostudio.tw/category/python/index.html)
 
 [https://github.com/telunyang](https://github.com/telunyang)
+
+[寶可夢API](https://pokeapi.co/)
