@@ -45,7 +45,7 @@ class Bullshit:
                 if len(list_famous) == 0:
                     break
                 
-                # pop為移除指定索引的元素，為了解析文本
+                # pop為將指定索引的值從陣列拿走
                 sentence_famous = list_famous.pop(0)
 
                 # 用曾說過，曾講過來取代data.json中的a
