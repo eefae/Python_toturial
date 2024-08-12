@@ -3,3 +3,4 @@
 line_token.py
 __pycache__
 data.json
+*checkpoints*

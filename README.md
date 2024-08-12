@@ -165,7 +165,11 @@ if __name__ == "__main__":
 1. 首先下載ngrok(架構途中的webhook)
   - 用於將本地伺服器位址轉發至網際網路
   - 申請Authtoken
-  - [下載](https://dashboard.ngrok.com/get-started/setup/windows)
+  - [下載](https://dashboard.ngrok.com/get-started/setup/windows) 
+    ```powershell 
+    # 如果遇到防火牆擋住，輸入以下指令
+    Invoke-WebRequest -Uri "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip" -OutFile "ngrok-v3-stable-windows-amd64.zip"
+    ```
   - 解壓縮並打開ngrok.exe
   - 輸入```ngrok config add-authtoken $YOUR_AUTHTOKEN```
 
